@@ -1,0 +1,167 @@
+.cards {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 32% 32% 32%;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 365px;
+  text-align: center;
+}
+
+ .first_part {
+  position: relative;
+  bottom: 5px;
+ }
+
+ .second_part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0px 10px;
+ }
+
+.leftcarousel {
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  background-color: #ffff;
+  z-index: 10;
+  width: 20px;
+  cursor: pointer;
+}
+
+.rightcarousel {
+  position: absolute;
+  right: 10px;
+  top: 150px;
+  background-color: #ffff;
+  z-index: 10;
+  width: 20px;
+  cursor: pointer;
+}
+
+.landImage {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.boldFont {
+  color: #000000;
+  font-size: 16px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+}
+
+.landImage {
+  object-fit: cover;
+  width: 100%;
+}
+
+.vertical_line {
+  border: 2px solid black;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.shareIcons {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  flex-direction: row;
+  gap: 20px;
+  z-index: 120;
+  right: 10px;
+}
+.roundedBorder {
+  border-radius: 50%;
+  background-color: #ddd;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+  .cards {
+    grid-template-columns: 100%;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .first_part, .second_part {
+    padding: 5px 10px;
+  }
+
+  .leftcarousel, .rightcarousel {
+    top: 120px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .vertical_line {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .cards {
+    grid-template-columns: 48% 48%;
+    gap: 15px; 
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .leftcarousel, .rightcarousel {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .first_part,
+  .second_part {
+    padding: 5px;
+  }
+
+  .leftcarousel,
+  .rightcarousel {
+    top: 100px;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+
